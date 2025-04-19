@@ -1,0 +1,56 @@
+.bp-popconfirm {
+  &-slot {
+    position: relative;
+    display: inline-block;
+  }
+
+  &-inner {
+    min-width: 200px;
+    max-width: 400px;
+    background-color: @gary-1;
+    border: 1px solid @gary-4;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 12px 10px;
+    z-index: 99;
+    transition: all 0.2s ease;
+    .no-select;
+
+    &-content {
+      display: flex;
+      align-items: center;
+
+      .bp-popconfirm-icon {
+        display: flex;
+        margin-right: 6px;
+      }
+
+      .bp-popconfirm-text {
+        font-size: 13px;
+        color: @gary-10;
+        font-weight: normal;
+        letter-spacing: 0.2px;
+      }
+
+      .bp-icon-information-fill {
+        fill: @primary-6;
+      }
+
+      .bp-icon-checkbox-circle-fill {
+        fill: @success-6;
+      }
+
+      .bp-icon-close-circle-fill {
+        fill: @danger-6;
+      }
+
+      .bp-icon-error-warning-fill {
+        fill: @warning-6;
+      }
+    }
+
+    &-footer {
+      margin-top: 12px;
+    }
+  }
+}

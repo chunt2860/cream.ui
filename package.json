@@ -1,0 +1,62 @@
+{
+  "name": "birdpaper-ui",
+  "version": "2.2.2",
+  "description": "一个通用的 vue3 UI组件库。A common vue3 UI component library.",
+  "workspaces": [
+    "packages",
+    "docs"
+  ],
+  "scripts": {
+    "docs": "pnpm run -C docs dev",
+    "build": "pnpm run -C packages build",
+    "scripts:dev": "pnpm run -C scripts dev",
+    "scripts:build": "pnpm run -C scripts build",
+    "build:docs": "pnpm run -C docs build",
+    "build:docs-root": "pnpm run -C docs build:root",
+    "preview:docs": "pnpm run -C docs preview",
+    "yalc": "pnpm run build && yalc publish --push",
+    "commit": "git-cz"
+  },
+  "keywords": [
+    "Vue3",
+    "components",
+    "UI组件库"
+  ],
+  "author": "木亦Sam",
+  "license": "MIT",
+  "dependencies": {
+    "async-validator": "^4.2.5",
+    "birdpaper-icon": "^0.1.0",
+    "dayjs": "^1.11.10",
+    "vue-virtual-scroller": "2.0.0-beta.8",
+    "vue": "^3.3.2"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.0.1",
+    "cz-customizable": "^7.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    }
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "dist/components/index.d.ts",
+  "sideEffects": [
+    "dist/*",
+    "es/**/style/*",
+    "lib/**/style/*",
+    "*.less"
+  ],
+  "files": [
+    "dist",
+    "es",
+    "lib"
+  ],
+  "homepage": "https://www.birdpaper.design",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/birdpaper-team/birdpaper-ui"
+  }
+}

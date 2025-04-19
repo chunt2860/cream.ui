@@ -1,0 +1,43 @@
+@import "../../../packages/components/common/index.less";
+
+.icon-page {
+  width: 100%;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .no-select;
+  }
+
+  &-tag {
+    display: flex;
+
+    a {
+      &:not(:first-child) {
+        margin-left: 10px;
+      }
+
+      img {
+        height: 18px;
+      }
+    }
+  }
+
+  &-logo {
+    width: 280px;
+  }
+
+  &-text {
+    font-size: 13px;
+    color: @gary-8;
+    letter-spacing: .2px;
+    margin-bottom: 40px !important;
+
+    a {
+      font-weight: bold;
+      color: @primary-6;
+      .font-quick;
+    }
+  }
+}
